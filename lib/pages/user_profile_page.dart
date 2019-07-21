@@ -11,8 +11,9 @@ class _UserProfilePageState extends State<StatefulWidget> {
     return Scaffold(
         body: SingleChildScrollView(
       child: Container(
+        color: Color(0xffe7eaf2),
         width: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.all(40.0),
+        padding: EdgeInsets.fromLTRB(40.0,40,40,70),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
@@ -54,8 +55,8 @@ class _UserProfilePageState extends State<StatefulWidget> {
             ),
            SizedBox(height: 70,),
           _placeContainer('Evelens Apartment',Color(0xff526fff),false),
-          _placeContainer('Evelens Apartment',Color(0xff8f48ff),false),
-          _placeContainer('Evelens Apartment',Color(0xffffffff),true),
+          _placeContainer('Parents House',Color(0xff8f48ff),false),
+          _placeContainer('Add another one',Color(0xffffffff),true),
           ],
         ),
       ),

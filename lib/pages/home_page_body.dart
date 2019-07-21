@@ -145,49 +145,38 @@ class _HomePageBodyState extends State<HomePageBody> {
             SizedBox(
               width: 25,
             ),
-            Text(
-              'Bedroom',
-              style: TextStyle(
-                  color: Color(0xffb2b0b9),
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600),
+            _roomLabel(
+              'Living Room',
+               ),
+            SizedBox(
+              width: 25,
+            ),
+            _roomLabel(
+              'Study Room',
+               ),
+            SizedBox(
+              width: 25,
+            ),
+            _roomLabel(
+              'Kitchin',
             ),
             SizedBox(
               width: 25,
             ),
-            Text(
-              'Bedroom',
-              style: TextStyle(
-                  color: Color(0xffb2b0b9),
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600),
-            ),
-            SizedBox(
-              width: 25,
-            ),
-            Text(
-              'Bedroom',
-              style: TextStyle(
-                  color: Color(0xffb2b0b9),
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600),
-            ),
-            SizedBox(
-              width: 25,
-            ),
-            Text(
-              'Bedroom',
-              style: TextStyle(
-                  color: Color(0xffb2b0b9),
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600),
-            )
           ],
         ),
       ),
     );
   }
-
+  Widget _roomLabel(String title){
+    return Text(
+              'Kitchin',
+              style: TextStyle(
+                  color: Color(0xffb2b0b9),
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600),
+            );
+  }
   Widget _buildApplianceCard(ApplianceModel model, int index) {
     return Container(
       height: 220,
@@ -258,7 +247,7 @@ class _HomePageBodyState extends State<HomePageBody> {
     return Container(
         alignment: Alignment.topCenter,
         // padding: EdgeInsets.symmetric(horizontal: 20, vertical: 0),
-        height: 480,
+        height: 487,
         child: GridView.count(
           // mainAxisSpacing: 10,
           // crossAxisSpacing: 10,
