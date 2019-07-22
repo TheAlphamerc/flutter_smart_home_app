@@ -5,38 +5,14 @@ import 'package:flutter_smart_home_app/pages/user_profile_page.dart';
 import 'package:flutter_smart_home_app/scopedModel/connectedModel.dart';
 
 class HomePageBody extends StatefulWidget {
-  final ApplianceModel model;
   HomePageBody(this.model);
+
+  final ApplianceModel model;
+
   _HomePageBodyState createState() => _HomePageBodyState();
 }
 
 class _HomePageBodyState extends State<HomePageBody> {
-  @override
-  Widget build(BuildContext context) {
-    return Column(children: <Widget>[
-      Container(
-        height: 258,
-        width: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.only(
-            top: MediaQuery.of(context).padding.top + 50,
-            bottom: 30,
-            left: 30,
-            right: 30.0),
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Color(0xff669df4), Color(0xff4e80f3)]),
-            borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(30),
-                bottomRight: Radius.circular(30))),
-        child: _upperContainer(),
-      ),
-      _roomCategories(),
-      _applianceGrid(widget.model)
-    ]);
-  }
-
   Widget _upperContainer() {
     return Container(
       alignment: Alignment.topLeft,
@@ -168,6 +144,7 @@ class _HomePageBodyState extends State<HomePageBody> {
       ),
     );
   }
+
   Widget _roomLabel(String title){
     return Text(
               'Kitchin',
@@ -177,6 +154,7 @@ class _HomePageBodyState extends State<HomePageBody> {
                   fontWeight: FontWeight.w600),
             );
   }
+
   Widget _buildApplianceCard(ApplianceModel model, int index) {
     return Container(
       height: 220,
@@ -286,5 +264,31 @@ class _HomePageBodyState extends State<HomePageBody> {
                   );
           }),
         ));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: <Widget>[
+      Container(
+        height: 258,
+        width: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.only(
+            top: MediaQuery.of(context).padding.top + 50,
+            bottom: 30,
+            left: 30,
+            right: 30.0),
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Color(0xff669df4), Color(0xff4e80f3)]),
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(30),
+                bottomRight: Radius.circular(30))),
+        child: _upperContainer(),
+      ),
+      _roomCategories(),
+      _applianceGrid(widget.model)
+    ]);
   }
 }

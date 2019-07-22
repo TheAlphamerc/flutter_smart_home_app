@@ -6,6 +6,26 @@ class UserProfilePage extends StatefulWidget {
 }
 
 class _UserProfilePageState extends State<StatefulWidget> {
+  Widget  _placeContainer(String title, Color color,bool leftIcon){
+    return Column(children: <Widget>[
+       Container(
+         height: 60,
+         width: MediaQuery.of(context).size.width - 40,
+         padding: EdgeInsets.all(20),
+         margin: EdgeInsets.symmetric(vertical: 10),
+         decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),
+         color:color),
+         child: Row(
+           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+           children: <Widget>[
+           Text(title,style: TextStyle(color: leftIcon ? Color(0xffa3a3a3) : Colors.white,fontSize: 20,fontWeight: FontWeight.w600),),
+           leftIcon ? Icon(Icons.add,color: Color(0xffa3a3a3),)
+           : Container()
+         ],)
+       )
+    ],);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,24 +81,5 @@ class _UserProfilePageState extends State<StatefulWidget> {
         ),
       ),
     ));
-  }
-  Widget  _placeContainer(String title, Color color,bool leftIcon){
-    return Column(children: <Widget>[
-       Container(
-         height: 60,
-         width: MediaQuery.of(context).size.width - 40,
-         padding: EdgeInsets.all(20),
-         margin: EdgeInsets.symmetric(vertical: 10),
-         decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),
-         color:color),
-         child: Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: <Widget>[
-           Text(title,style: TextStyle(color: leftIcon ? Color(0xffa3a3a3) : Colors.white,fontSize: 20,fontWeight: FontWeight.w600),),
-           leftIcon ? Icon(Icons.add,color: Color(0xffa3a3a3),)
-           : Container()
-         ],)
-       )
-    ],);
   }
 }

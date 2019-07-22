@@ -41,11 +41,9 @@ class  ConnectedModel extends Model{
       bottomRightIcon: Icons.threesixty,
       isEnable : true),
   ];
-  
 }
 class ApplianceModel extends ConnectedModel {
   List<Appliance> get allYatch {
     return List.from(_applianceList);
   }
-  
 }
