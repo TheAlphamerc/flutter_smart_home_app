@@ -1,6 +1,9 @@
 # flutter_smart_home_app
 
-A new Flutter project.
+Flutter good looking smart home sample app.</Br>
+This App is based on [Smarty - smart home app concept](https://dribbble.com/shots/6808738-Smarty-smart-home-app-concept) designed by [Karlo](https://dribbble.com/Agfa)
+<img src="https://cdn.dribbble.com/users/1714765/screenshots/6808738/custom___6_4x.png"  /> 
+
 
 ## Getting Started
 
